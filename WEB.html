@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        
+        web page
+
+    </title>
+
+    <style>
+
+        body{
+            font-family: Arial, sans-serif;
+            background-color: gray;
+            margin: 0;
+            padding: 0;
+        }
+
+        .card{
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 3px 7px rgba(0, 0, 0, 0.4);
+            padding: 50px;
+            text-align: center;
+            max-width: 400px;
+        }
+
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h2{
+            color: #36b75a;
+            margin-bottom: 10px;
+        }
+
+        form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        p{
+            color:#666;
+        }
+
+        .msg{
+            display: none;
+            color: green;
+            margin-top: 40px;
+        }
+
+        input[type="email"] {
+            width: 65%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px;
+            border-radius: 7px;
+        }
+
+        button{
+            background-color: crimson;
+            color: #fff;
+            padding: 10px 10px;
+            margin-top: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.4s ease;
+        }
+
+        button:hover{
+            background-color: #65686b;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="card">
+            <h2>
+                Subscribe to the page
+            </h2>
+
+            <p>
+                Update with latest technologies
+            </p>
+
+            <form id="thanks" method="POST">
+                <input type="email" name="emial" id="email" placeholder="Enter your mail" required>
+
+                <button onclick="alert('submit')">Subscribe</button>
+            </form>
+
+            <p class="msg" id="congo">
+                Thanks For Subscribing!
+            </p>
+        </div>
+    </div>
+
+    <script>
+
+        const form=document.getElementById("thanks");
+        const successMessage = document.getElementById("congo");
+
+        form.addEventListener("submit", function (e){
+            e.preventDefault();
+            successMessage.style.display= "block";
+        });
+    </script>
+</body>
+</html>
